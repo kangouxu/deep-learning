@@ -2,7 +2,7 @@ import torch
 import torch.utils.data as Data
 from torchvision import transforms
 from torchvision.datasets import FashionMNIST
-from model import AlexNet
+from model import VGGNet16
 
 
 
@@ -49,7 +49,7 @@ def test_model_process(model, test_dataloader):
 
 if __name__=="__main__":
     # 加载模型
-    model = AlexNet()
+    model = VGGNet16()
     model.load_state_dict(torch.load('databest_model.pth'))
     # 加载测试数据
     test_dataloader = test_data_process()
